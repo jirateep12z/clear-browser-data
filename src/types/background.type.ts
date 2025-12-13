@@ -1,0 +1,26 @@
+import type {
+  ClearDataMessage,
+  ClearSiteDataMessage,
+  GetSettingsMessage,
+  GetStatisticsMessage,
+  SaveSettingsMessage,
+  WhitelistMessage
+} from '@/interfaces';
+
+export type ContextMenuId =
+  | 'clear-site-data'
+  | 'clear-site-cookies'
+  | 'clear-site-cache'
+  | 'separator-1'
+  | 'add-to-whitelist'
+  | 'remove-from-whitelist';
+
+export type CommandType = 'clear-all' | 'clear-cache';
+
+export type BackgroundMessage =
+  | ClearDataMessage
+  | GetSettingsMessage
+  | SaveSettingsMessage
+  | GetStatisticsMessage
+  | WhitelistMessage
+  | ClearSiteDataMessage;
