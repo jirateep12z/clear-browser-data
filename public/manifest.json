@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Clear Browser Data",
+  "description": "Quickly clear your browser data with customizable options, presets, and one-click cleanup",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/clear-browser-data.png",
+    "32": "icons/clear-browser-data.png",
+    "48": "icons/clear-browser-data.png",
+    "128": "icons/clear-browser-data.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/clear-browser-data.png",
+      "32": "icons/clear-browser-data.png",
+      "48": "icons/clear-browser-data.png",
+      "128": "icons/clear-browser-data.png"
+    },
+    "default_title": "Clear Browser Data"
+  },
+  "permissions": [
+    "browsingData",
+    "storage",
+    "notifications",
+    "tabs",
+    "contextMenus",
+    "alarms",
+    "cookies"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "clear-selected": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Delete",
+        "mac": "Command+Shift+Delete"
+      },
+      "description": "Clear selected data with current settings"
+    }
+  },
+  "host_permissions": ["<all_urls>"]
+}
